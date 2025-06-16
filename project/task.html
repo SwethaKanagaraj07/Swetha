@@ -1,0 +1,60 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title><style>
+        body{
+            background-color: darkcyan;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <h1>Students Form</h1>
+        <label for="Student Name">Student Name :</label>
+        <input id="Student Name" type="text" placeholder="Enter the name"  >
+        <br><br>
+        <label for="Roll number">Roll number:</label>
+        <input id="Roll number" type="Roll number" placeholder="Enter the Roll number" required maxlength="8">
+        <br><br>
+        <label for="Department">Department:</label>
+        <input id="Department" type="Department" placeholder="Enter the Department" required >
+        <br><br>
+        <label for="Section">Section:</label>
+        <input id="Section" type="Section" placeholder="Enter the section" required >
+        <br><br>
+        <button type="submit">submit</button>
+        <h1 id="result1"></h1>
+        <h1 id="result2"></h1>
+        <h1 id="result3"></h1>
+        <h1 id="result4"></h1>
+    </form>
+    <script>
+        document.getElementById("form").addEventListener("submit",function(e){
+            e.preventDefault();
+            const Student Name = document.getElementById("Student Name").value;
+            const Roll Number = document.getElementById("Roll Number").value;
+            const Department = document.getElementById("Department").value;
+            const Section = document.getElementById("Section").value;
+            console.log(Student Name,Roll Number,Department,Section)
+            document.getElementById("result1").textContent=Student Name
+            document.getElementById("result2").textContent=Roll Number 
+            document.getElementById("result3").textContent=Department
+            document.getElementById("result4").textContent=Section
+        })
+    </script>
+</body>
+
+</html>
+
