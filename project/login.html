@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LogIn</title><style>
+        body{
+            background-color: darkmagenta;
+            margin: 0;
+            height: 10vh;
+            display: flex;
+            
+        
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+    </style>
 </head>
+
 <body>
-    <form action="">
-        <h1>LOGIN</h1>
-        <label for="email">email:</label>
-        <input type="email" placeholder="enter the email" required>
+    <form id="form">
+        <h1>Login</h1>
+        <label for="email">Email:</label>
+        <input id="email" type="text" placeholder="Enter the email" required>
         <br><br>
-        <label for="password">password:</label>
-        <input type="password" placeholder="enter the password"required maxlength="10">
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="Enter the password" required maxlength="8">
         <br><br>
-        <label for="feedback">feedback:</label>
-        <textarea name="feedback" id="feedback" placeholder="enter your feedback" maxlength="50 letters"></textarea>
-        <br><br>
-        <label for="gender">gender:</label>
-        <select name="gender" id="gender">
-           <option value="select"></option>
-           <option value="male"></option>    
-           <option value="female" ></option> 
-           
-        <button>submit</button>  
-    
+        
+        <button type="submit">submit</button>
+        <h1 id="result1"></h1>
+        <h1 id="result2"></h1>
+    </form>
+    <script>
+        document.getElementById("form").addEventListener("submit",function(e){
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            console.log(email,password)
+            document.getElementById("result1").textContent=email
+            document.getElementById("result2").textContent=password
+        })
+    </script>
 </body>
+
 </html>
+
